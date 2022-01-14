@@ -18,7 +18,7 @@
 
   <main>
     <div class="container">
-      <div class="row justify-evenly">
+      <div id="week-buttons" class="row justify-evenly">
         <button class="weekday">Sunday</button>
         <button class="weekday">Monday</button>
         <button class="weekday">Tuesday</button>
@@ -27,8 +27,29 @@
         <button class="weekday">Friday</button>
         <button class="weekday">Saturday</button>
       </div>
-      <div class="row justify-center">
+      <div id="add-button" class="row justify-center">
         <button type="button">Add Entry</button>
+      </div>
+    </div>
+    <div id="entry-modal" class="">
+      <div class="modal-content">
+        <h3>Add Entry</h3>
+        <form id="entry-form" class="">
+          <select name="day-selection" id="day-selection">
+            <option value="default" disabled selected>Select Day of Week</option>
+            <option value="sunday">Sunday</option>
+            <option value="monday">Monday</option>
+            <option value="tuesday">Tuesday</option>
+            <option value="wednesday">Wednesday</option>
+            <option value="thursday">Thursday</option>
+            <option value="friday">Friday</option>
+            <option value="saturday">Saturday</option>
+          </select>
+          <select name="time-selection" id="time-selection">
+            <option value="default" disabled selected>Select a Time</option>
+          </select>
+          <textarea name="" id="" cols="30" rows="10"></textarea>
+        </form>
       </div>
     </div>
   </main>
