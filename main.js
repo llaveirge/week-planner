@@ -3,7 +3,7 @@ var $addButton = document.getElementById('add-button');
 var $modal = document.getElementById('entry-modal');
 var $form = document.getElementById('entry-form');
 var $timeSelection = document.getElementById('time-selection');
-
+// var $tableEntries = document.getElementById('table-entries');
 function goToAdd(event) {
   $modal.style.display = 'block';
 }
@@ -39,6 +39,19 @@ function saveEntry(event) {
   // console.log(data);
 }
 
+// function updateTable(day) {
+// console.log(data);
+// var length = 8;
+// if (data.day.length <= 7) {
+//   length = data.day.length;
+// }
+// for (var i = 0; i < length; i++) {
+
+// }
+// }
 $addButton.addEventListener('click', goToAdd);
 renderTime();
 $form.addEventListener('submit', saveEntry);
+// updateTable();
+// console.log(data.monday);
+// console.log($tableEntries.rows.item(1).cells[1].textContent);

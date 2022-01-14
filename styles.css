@@ -109,6 +109,7 @@ tr:nth-child(even) {
 }
 
 td {
+  height: 34px;
   border-top: none;
   border-bottom: none;
 }
