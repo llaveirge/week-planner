@@ -1,9 +1,10 @@
-h1 {
+h1,
+h2,
+h3 {
   text-align: center;
 }
 
 h2 {
-  text-align: center;
   font-size: 2.5rem;
 }
 
@@ -81,4 +82,37 @@ textarea {
 
 .border {
   border: 2px solid rgb(0, 0, 0);
+}
+
+table {
+  max-width: 1250px;
+  font-family: arial, sans-serif;
+  border: 1px solid #000;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td,
+th {
+  border: 1px solid #000;
+  text-align: left;
+  padding: 8px;
+}
+
+th {
+  border-bottom: none;
+  background-color: #ccc;
+}
+
+tr:nth-child(even) {
+  background-color: rgb(233, 233, 233);
+}
+
+td {
+  border-top: none;
+  border-bottom: none;
+}
+
+.time-td {
+  width: 100px;
 }
