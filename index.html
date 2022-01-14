@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Week Planner</title>
-  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="reset.css">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -36,7 +36,7 @@
         <h2>Add Entry</h2>
         <form id="entry-form" class="">
           <div class="row">
-            <select class="margin-right" required name="day-selection" id="day-selection">
+            <select class="margin-right border" required name="day-selection" id="day-selection">
               <option value="default" disabled selected>Select Day of Week</option>
               <option value="sunday">Sunday</option>
               <option value="monday">Monday</option>
@@ -46,7 +46,7 @@
               <option value="friday">Friday</option>
               <option value="saturday">Saturday</option>
             </select>
-            <select name="time-selection" id="time-selection">
+            <select class="border" name="time-selection" id="time-selection">
               <option value="default" disabled selected>Select a Time</option>
             </select>
           </div>
