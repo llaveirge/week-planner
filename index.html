@@ -33,22 +33,29 @@
     </div>
     <div id="entry-modal" class="">
       <div class="modal-content">
-        <h3>Add Entry</h3>
+        <h2>Add Entry</h2>
         <form id="entry-form" class="">
-          <select name="day-selection" id="day-selection">
-            <option value="default" disabled selected>Select Day of Week</option>
-            <option value="sunday">Sunday</option>
-            <option value="monday">Monday</option>
-            <option value="tuesday">Tuesday</option>
-            <option value="wednesday">Wednesday</option>
-            <option value="thursday">Thursday</option>
-            <option value="friday">Friday</option>
-            <option value="saturday">Saturday</option>
-          </select>
-          <select name="time-selection" id="time-selection">
-            <option value="default" disabled selected>Select a Time</option>
-          </select>
-          <textarea name="" id="" cols="30" rows="10"></textarea>
+          <div class="row">
+            <select class="margin-right" required name="day-selection" id="day-selection">
+              <option value="default" disabled selected>Select Day of Week</option>
+              <option value="sunday">Sunday</option>
+              <option value="monday">Monday</option>
+              <option value="tuesday">Tuesday</option>
+              <option value="wednesday">Wednesday</option>
+              <option value="thursday">Thursday</option>
+              <option value="friday">Friday</option>
+              <option value="saturday">Saturday</option>
+            </select>
+            <select name="time-selection" id="time-selection">
+              <option value="default" disabled selected>Select a Time</option>
+            </select>
+          </div>
+          <label for="description">
+            <textarea required name="description" placeholder="Description" id="description" cols="1000" rows="10"></textarea>
+          </label>
+          <div class="row justify-end">
+            <button class="submit-button" type="submit" id="submit-button">Submit</button>
+          </div>
         </form>
       </div>
     </div>

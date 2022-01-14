@@ -2,6 +2,11 @@ h1 {
   text-align: center;
 }
 
+h2 {
+  text-align: center;
+  font-size: 2.5rem;
+}
+
 #week-buttons {
   margin: 3rem 0;
 }
@@ -43,10 +48,27 @@ h1 {
   top: 205px;
   left: 50%;
   transform: translateX(-50%);
-  width: 255px;
-  height: 210px;
   background: #fff;
   border: 1px solid #afafaf;
   box-sizing: border-box;
-  border-radius: 8px;
+  border-radius: 2px;
+  padding: 0 2rem;
+}
+
+.justify-end {
+  justify-content: flex-end;
+}
+
+textarea {
+  margin: 1rem 0;
+  width: 1000px;
+  resize: none;
+}
+
+.submit-button {
+  margin-bottom: 2rem;
+}
+
+.margin-right {
+  margin-right: 2rem;
 }
