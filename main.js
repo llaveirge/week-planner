@@ -3,7 +3,8 @@ var $addButton = document.getElementById('add-button');
 var $modal = document.getElementById('entry-modal');
 var $form = document.getElementById('entry-form');
 var $timeSelection = document.getElementById('time-selection');
-// var $tableEntries = document.getElementById('table-entries');
+var $tableEntries = document.getElementById('table-entries');
+var $weekButtons = document.getElementById('week-buttons');
 function goToAdd(event) {
   $modal.style.display = 'block';
 }
@@ -26,32 +27,47 @@ function saveEntry(event) {
   var timeOfDay = formData.get('time-selection');
   var description = formData.get('description');
   var entry = {
-    dayOfWeek: dayOfWeek,
     timeOfDay: timeOfDay,
     description: description,
     id: data.id
   };
-  // console.log(dayOfWeek);
-  // console.log(timeOfDay);
-  // console.log(description);
+  // if (data[dayOfWeek].length > 0) {
+  //   for (var i = 0; i < data[dayOfWeek].length; i++) {
+  //     var newDate = +entry.timeOfDay.split(':')[0];
+  //     var oldDate = +data.dayOfWeek[i].timeOfDay.split(':')[0];
+  //     var temp = 0;
+  //     if (newDate < oldDate) {
+  //       temp = oldDate;
+  //       data[dayOfWeek][i] = newDate;
+  //     } else {
+  //     }
+  //   }
+  // }
   data[dayOfWeek].unshift(entry);
   data.id++;
-  // console.log(data);
 }
 
-// function updateTable(day) {
-// console.log(data);
-// var length = 8;
-// if (data.day.length <= 7) {
-//   length = data.day.length;
-// }
-// for (var i = 0; i < length; i++) {
-
-// }
-// }
+function updateTable(event) {
+  var day = event.target.textContent.toLowerCase();
+  var size = 8;
+  if (data[day].length <= 7) {
+    size = data[day].length;
+  }
+  // console.log(typeof +(data[day][0].timeOfDay.split(':')[0]));
+  for (var i = 1; i <= size; i++) {
+    // for (var j = 0; j < 24; j++) {
+    //   for (var k = 0; k M)
+    //   if (+(data[day][i - 1].timeOfDay.split(':')[0]) === j) {
+    //     console.log(+(data[day][i - 1].timeOfDay.split(':')[0]));
+    //     $tableEntries.rows.item(i).cells[0].textContent = data[day][i - 1].timeOfDay;
+    //     $tableEntries.rows.item(i).cells[1].textContent = data[day][i - 1].description;
+    //   }
+    // }
+    $tableEntries.rows.item(i).cells[0].textContent = data[day][i - 1].timeOfDay;
+    $tableEntries.rows.item(i).cells[1].textContent = data[day][i - 1].description;
+  }
+}
 $addButton.addEventListener('click', goToAdd);
 renderTime();
 $form.addEventListener('submit', saveEntry);
-// updateTable();
-// console.log(data.monday);
-// console.log($tableEntries.rows.item(1).cells[1].textContent);
+$weekButtons.addEventListener('click', updateTable);
